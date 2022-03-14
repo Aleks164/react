@@ -1,0 +1,10 @@
+body {
+  background-color: lightgrey;
+}
+
+.image {
+  background-image: url('./assets/cat.jpg');
+  width: 150px;
+  height: 150px;
+  background-size:cover;
+}
