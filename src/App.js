@@ -1,17 +1,21 @@
 import React from 'react';
-import { Button } from './components/button/button';
-import { Image } from './components/image/image';
-import { Paragraph } from './components/paragraph/paragraph';
-import { Title } from './components/title/title';
+import { Image } from './components/image/';
+import { Paragraph } from './components/paragraph/';
+import { Title } from './components/title/';
+import { Hr } from './components/hr/';
+import { HSelector } from './components/htags/';
 
 const textP = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt tempora repellendus ea commodi repellat accusamus nostrum ipsam repudiandae odio? Dolore libero quisquam blanditiis officiis ipsa nobis ullam quod, accusamus quia."
 
-export const App = ({ click, disabled }) => {
+export const App = () => {
   return (
     <>
-      <Button onClick={click} />
       <Title />
+      <Hr />
+      <HSelector />
+      <Hr />
       <Paragraph textP={textP} />
+      <Hr />
       <Image />
     </>
   )
