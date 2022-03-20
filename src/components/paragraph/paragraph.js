@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Paragraph = ({ onClick, disabled, textP }) => {
+export const Paragraph = ({ textP }) => {
     return (
         <p >{textP}</p>
     )
