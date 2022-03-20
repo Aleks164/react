@@ -5,7 +5,7 @@ export function HSelect({ handleChange }) {
     return (
         <>
             <label htmlFor="h-select">Выберите тег "h" </label>
-            <select onChange={handleChange} name="h-source" id="h-select">
+            <select onChange={handleChange} name="h-source" data-testid="h-select">
                 <option defaultValue value="h1">h1</option>
                 <option value="h2">h2</option>
                 <option value="h5">h5</option>

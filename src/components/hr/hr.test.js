@@ -7,5 +7,4 @@ describe("hr", () => {
     it("hr is work", () => {
         render(<Hr />)
     })
-    // expect(screen.queryAllByLabelText("hr").toBe(1))
 })

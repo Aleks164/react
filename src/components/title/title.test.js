@@ -14,7 +14,6 @@ describe("Title", () => {
         render(<Title />)
 
         fireEvent.click(screen.getByText("Click on me"));
-        screen.debug();
         expect(screen.queryAllByText(/Hidden content/).length).toBe(3);
     })
     it("Title change color after mouseleave action", () => {
