@@ -10,7 +10,7 @@ export const App = ({ click, disabled }) => {
   return (
     <>
       <Button onClick={click} />
-      <Title />
+      <Title textP={textP} />
       <Paragraph textP={textP} />
       <Image />
     </>

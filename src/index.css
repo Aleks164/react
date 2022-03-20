@@ -8,3 +8,6 @@ body {
   height: 150px;
   background-size:cover;
 }
+.wrap{
+  border: 2px solid slategray;
+}
