@@ -3,8 +3,8 @@ import { HRenderer } from "./HRenderer";
 import { HSelect } from './HSelect';
 
 
-export const HSelector = () => {
-    const [hSelect, setHSelect] = useState("h1");
+export const HSelector = (prop) => {
+    const [hSelect, setHSelect] = useState(prop.value);
     const handleChange = (event) => {
         setHSelect(event.target.value)
     };

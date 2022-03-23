@@ -8,26 +8,3 @@ body {
   height: 150px;
   background-size:cover;
 }
-.hidenBlock-enter {
-  opacity: 0;
-}
-.hidenBlock-enter-active {
-  opacity: 1;
-  transition: fade 500ms ease-in;
-}
-.hidenBlock-exit {
-  opacity: 1;
-}
-.hidenBlock-exit-active {
-  opacity: 0;
-  transition: fade 500ms ease-in;
-}
-
-@keyframes fade {
-  0%{
-    transform: translateX(-100px);
-  }
-  100%{
-    transform: translateX(0px);
-  }
-}
