@@ -1,7 +1,9 @@
-import React from 'react';
+import React from "react";
 
-export const Paragraph = ({ textP }) => {
-    return (
-        <p >{textP}</p>
-    )
-}
+type TextType = {
+  textP: string;
+};
+
+export const Paragraph = ({ textP }: TextType) => {
+  return <p>{textP}</p>;
+};
