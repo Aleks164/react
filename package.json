@@ -75,11 +75,14 @@
     "webpack-dev-server": "^4.7.4"
   },
   "lint-staged": {
-    "*.{js,ts,tsx,json,html,css,md,yml,yaml}": [
-      "npm run test",
-      "npm run lint",
-      "npm run tsc"
-    ]
+    "*.{js,tsx}": [
+      "prettier --write",
+      "eslint --cache --fix --ext .js,.ts"
+    ],
+    "*.{css,md,yml}": "prettier --write",
+    "*.css": "stylelint --fix",
+    "*.{js,ts}": "eslint --cache --fix",
+    "*.{js,ts,css,md}": "prettier --write"
   },
   "loki": {
     "configurations": {
