@@ -1,7 +1,7 @@
 import React from "react";
 
 type HSelectType = {
-  handleChange: () => {};
+  handleChange: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 };
 
 export function HSelect(props: HSelectType) {

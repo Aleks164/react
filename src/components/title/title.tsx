@@ -8,7 +8,7 @@ export const h1Style = {
   border: `2px solid black`,
   backgroundColor: `rgb(176 159 233)`,
   textAlign: `center`,
-  width: `230px`
+  width: `230px`,
 };
 
 export const Title = () => {
@@ -20,7 +20,9 @@ export const Title = () => {
 
   const hoverChange = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (hover) {
-      (event.target as MyEventTarget).style.backgroundColor = `rgb(176 159 233)`;
+      (
+        event.target as MyEventTarget
+      ).style.backgroundColor = `rgb(176 159 233)`;
     } else {
       (event.target as MyEventTarget).style.backgroundColor = `red`;
     }

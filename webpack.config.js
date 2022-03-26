@@ -1,31 +1,32 @@
-const { resolve } = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+/* eslint-disable @typescript-eslint/no-var-requires */
+const { resolve } = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
-const isDev = process.env.NODE_ENV === 'development';
+const isDev = process.env.NODE_ENV === "development";
 
 module.exports = {
-  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
-  entry: resolve(__dirname, './src/index'),
+  mode: process.env.NODE_ENV === "production" ? "production" : "development",
+  entry: resolve(__dirname, "./src/index"),
   devtool:
-    process.env.NODE_ENV === 'production'
-      ? 'hidden-source-map'
-      : 'eval-source-map',
+    process.env.NODE_ENV === "production"
+      ? "hidden-source-map"
+      : "eval-source-map",
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
   },
   devServer: {
     compress: true,
     port: 8000,
     client: {
-      logging: 'info',
+      logging: "info",
     },
   },
   output: {
-    filename: '[name].bundle.[chunkhash].js',
+    filename: "[name].bundle.[chunkhash].js",
     clean: true,
-    path: resolve(__dirname, './build'),
+    path: resolve(__dirname, "./build"),
     environment: {
       arrowFunction: false,
     },
@@ -36,25 +37,20 @@ module.exports = {
         test: /\.(j|t)sx?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
         },
       },
-      // {
-      //   test: /\.tsx?$/,
-      //   use: 'ts-loader',
-      //   exclude: /node_modules/,
-      // },
       {
         test: /\.css$/i,
         exclude: /\.module\.css$/i,
         use: [
-          isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+          isDev ? "style-loader" : MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               modules: {
-                mode: 'icss',
-                localIdentName: '[name]___[hash:base64:5]',
+                mode: "icss",
+                localIdentName: "[name]___[hash:base64:5]",
               },
             },
           },
@@ -63,13 +59,13 @@ module.exports = {
       {
         test: /\.module\.css$/,
         use: [
-          isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+          isDev ? "style-loader" : MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               modules: {
-                mode: 'local',
-                localIdentName: '[name]___[hash:base64:5]',
+                mode: "local",
+                localIdentName: "[name]___[hash:base64:5]",
               },
             },
           },
@@ -77,30 +73,30 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
         generator: {
-          filename: 'static/[hash][ext]',
+          filename: "static/[hash][ext]",
         },
       },
       {
         test: /\.html$/i,
-        loader: 'html-loader',
+        loader: "html-loader",
       },
     ],
   },
   optimization: {
-    minimizer: ['...', new CssMinimizerPlugin()],
+    minimizer: ["...", new CssMinimizerPlugin()],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: resolve(__dirname, './src/index.html'),
+      template: resolve(__dirname, "./src/index.html"),
     }),
     ...(isDev
       ? [new MiniCssExtractPlugin()]
       : [
         new MiniCssExtractPlugin({
-          filename: '[name].[contenthash].css',
-          chunkFilename: '[name].[contenthash].css',
+          filename: "[name].[contenthash].css",
+          chunkFilename: "[name].[contenthash].css",
         }),
       ]),
   ],

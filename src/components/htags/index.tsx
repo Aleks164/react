@@ -1,1 +1,1 @@
-export { HSelector } from "./MainHSelector"
+export { HSelector } from "./MainHSelector";

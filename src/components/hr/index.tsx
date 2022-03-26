@@ -1,1 +1,1 @@
-export { Hr } from "./hr"
+export { Hr } from "./hr";

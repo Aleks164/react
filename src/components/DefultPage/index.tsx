@@ -1,1 +1,1 @@
-export { DefultPage } from "./DefultPage"
+export { DefultPage } from "./DefultPage";

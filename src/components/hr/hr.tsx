@@ -1,7 +1,3 @@
-import React from 'react';
+import React from "react";
 
-export const Hr = () => {
-    return (
-        <hr className='hr' />
-    )
-}
+export const Hr = () => <hr className="hr" />;

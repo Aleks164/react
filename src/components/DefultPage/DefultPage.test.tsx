@@ -1,6 +1,6 @@
 import React from "react";
-import { DefultPage, textP } from "./DefultPage";
 import { render, screen } from "@testing-library/react";
+import { DefultPage, textP } from "./DefultPage";
 import "@testing-library/jest-dom";
 
 describe("DefultPage", () => {
