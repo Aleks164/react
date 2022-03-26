@@ -5,5 +5,10 @@ type TextType = {
 };
 
 export const Paragraph = ({ textP }: TextType) => {
-  return <p>{textP}</p>;
+  return <>
+    <p>{textP}</p>
+    <b>{textP}</b>
+    <br />
+    <i>{textP}</i>
+  </>
 };
