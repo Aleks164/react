@@ -17,7 +17,8 @@
     "predeploy": "npm run build-storybook",
     "deploy": "gh-pages -d storybook-static",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -82,7 +83,8 @@
     "*.{css,md,yml}": "prettier --write",
     "*.css": "stylelint --fix",
     "*.{js,ts}": "eslint --cache --fix",
-    "*.{js,ts,css,md}": "prettier --write"
+    "*.{js,ts,css,md}": "prettier --write",
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix"
   },
   "loki": {
     "configurations": {
