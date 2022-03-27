@@ -17,7 +17,7 @@ describe("DefultPage", () => {
     expect(screen.getByText("Some text in h1 element")).toBeInTheDocument();
     expect(screen.getByText('Выберите тег "h"')).toBeInTheDocument();
     expect(screen.getByText("h1")).toBeInTheDocument();
-    expect(screen.getByText(textP)).toBeInTheDocument();
+    expect(screen.getAllByText(textP).length).toBe(3);
 
     const { container } = render(<DefultPage />);
     const classImage = container.querySelector(".image");

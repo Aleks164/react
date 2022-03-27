@@ -7,6 +7,6 @@ describe("Paragraph", () => {
   it("Paragraph is working with text prop", () => {
     render(<Paragraph textP={"some text"} />);
 
-    expect(screen.getByText("some text")).toBeInTheDocument();
+    expect(screen.getAllByText("some text").length).toBe(3);
   });
 });
