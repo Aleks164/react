@@ -6,3 +6,4 @@ coverage/
 .github/
 build/
 webpack.config.js
+storybook-static/
