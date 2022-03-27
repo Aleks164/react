@@ -9,4 +9,4 @@
 -пробельный блок (с горизонтальной линией)
 -схлопывающийся блок (может сворачиваться в заголовк или показывать контент)
 -картинка;
-опубликовать storybook на github pages
+опубликовать storybook на github pages https://aleks164.github.io/react/?path=/story/app--primary
