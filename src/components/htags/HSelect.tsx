@@ -9,7 +9,9 @@ export function HSelect(props: HSelectType) {
     <>
       <label htmlFor="h-select">Выберите тег "h" </label>
       <select
-        onChange={props.handleChange}
+        onChange={
+          props.handleChange as unknown as React.ChangeEventHandler<HTMLSelectElement>
+        }
         name="h-source"
         data-testid="h-select"
         defaultValue={"default"}
